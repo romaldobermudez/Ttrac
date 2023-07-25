@@ -1,0 +1,192 @@
+﻿@page
+@model Ttrac.Presentacion.Pages.Respuestas.RespuestasModel
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-4 bg-light">
+            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Categorías</li>
+        </ol>
+    </nav>
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+        <div class="col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg my-3">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        @*Primer Columna*@
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-9">
+                                    <div class="p-4">
+                                        <div class="text-center d-flex justify-content-between align-items-center">
+                                            <h1 class="h4 text-gray-900 mb-2">Categorías de tiquetes</h1>
+                                            <!-- Boton Modal Crear-->
+                                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target=".bd-crearCategoria-modal-lg">
+                                                <i class="fas fa-plus"></i> Agregar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row bg-light">
+                                @* Selección de Estado *@
+                                <div class="col-lg-3 col-md-3 ">
+                                    <div class="py-3 px-5">
+                                        <label for="estado">Estado</label>
+                                        <select class="form-select rounded custom-select">
+                                            <option value="todos">Todos</option>
+                                            <option value="activo">Activo</option>
+                                            <option value="inactivo">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 ">
+                                    <div class="py-3 px-5">
+       
+                                    </div>
+                                </div>
+
+
+                                @*Campo de Búsqueda*@
+
+                                <div class="col-lg-6 col-md-3 d-flex align-items-end justify-content-end">
+                                    <div class="py-3 px-5 w-100">
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control rounded" placeholder="Buscar">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary ms-2 rounded" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Buscar respuesta">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @* Tabla de contenido*@
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center align-middle">Nombre</th>
+                                        <th scope="col" class="text-center align-middle">Estado</th>
+                                        <th scope="col" class="text-center align-middle"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center align-middle">Consultas</td>
+                                        <td class="text-center align-middle">Activo</td>
+                                        <td class="text-center align-middle">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary btn-sm m-1" data-toggle="modal"
+                                                        data-target=".bd-editarCategoria-modal-xl">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Problemas técnicos</td>
+                                        <td class="text-center align-middle">Inactivo</td>
+                                        <td class="text-center align-middle">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary btn-sm m-1" data-toggle="modal"
+                                                        data-target=".bd-editarCategoria-modal-xl">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Reclamos</td>
+                                        <td class="text-center align-middle">Activo</td>
+                                        <td class="text-center align-middle">
+                                            <div class="btn-group">
+                                                <button class="btn btn-primary btn-sm m-1" data-toggle="modal"
+                                                        data-target=".bd-editarCategoria-modal-xl">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eliminar">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                       
+                        
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- Selección de número de registros -->
+                                <div class="col-lg-6 col-md-12 mb-3">
+                                    <div class="row">
+                                        <div class="col-lg-5 d-flex justify-content-end">
+                                            <div>
+                                                <label for="nRegistro">Registro por página:</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div>
+                                                <select class="form-select rounded custom-select">
+                                                    <option value="opcion1">5</option>
+                                                    <option value="opcion2">10</option>
+                                                    <option value="opcion3">25</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Paginación -->
+                                <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
+                                    <div class="px-5">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VISTAS PARCIALES DE CREAR Y EDITAR -->
+    <partial name="Crear" />
+    <partial name="Editar" />
+</div>

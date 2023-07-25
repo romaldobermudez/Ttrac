@@ -1,0 +1,124 @@
+﻿
+
+<div class="modal fade bd-editar-modal-xl mt-4" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Respuesta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @*Contenido del modal*@
+                <form>
+                    <div class="row bg-light">
+                        @* Selección de Estado *@
+                        <div class="col-lg-3 col-md-3 ">
+                            <div class="py-3 px-5">
+                                <label for="estado">Estado</label>
+                                <select class="form-select rounded custom-select">
+                                    <option value="todos">Todos</option>
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        @* Selección de Categoría *@
+
+                        <div class="col-lg-3 col-md-3 ">
+                            <div class="py-3 px-5">
+                                <label for="categoria">Categoría</label>
+                                <select class="form-select rounded custom-select">
+                                    <option value="opcion1">Todas</option>
+                                    <option value="opcion2">Consultas</option>
+                                    <option value="opcion3">Reclamos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        @*Usuario que registra la respuesta*@
+
+                        <div class="col-lg-6 ">
+                            <div class="py-3 px-5">
+                                <div class="form-floating mb-3">
+
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Registrada por"
+                                           value="juan@perez.com" readonly>
+                                    <label for="floatingInput">Registrada por</label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        @*Primera colunna para formulario modal*@
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Respuesta">
+                                    <label for="floatingInput">Nombre de la respuesta</label>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese una respuesta válida.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Segunda colunna para formulario modal*@
+                        <div class="col-lg-6">
+                            <div class="p-5">
+
+                                @* Aqui se pueden agregar mas inputs*@
+
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                    <label for="floatingTextarea2">Cuerpo de la respuesta</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                @*Fin de contenido del modal*@
+                <div class="modal-footer pr-5 pl-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div class="justify-content-start">
+                        <div class="accordion" id="instructionsAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Instrucciones de Uso
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#instructionsAccordion">
+                                    <div class="accordion-body">
+                                        <ol>
+                                            <li>Por favor, complete todos los campos requeridos para continuar con la operación.</li>
+                                            <li>Verifique que los datos ingresados sean precisos y estén actualizados.</li>
+                                            <li>Utilice el teclado o el campo de selección para ingresar información de manera apropiada.</li>
+                                            <li>Si algún campo tiene un formato específico (por ejemplo, fecha o número), siga las indicaciones proporcionadas cerca del campo.</li>
+                                            <li>Haga clic en el botón "Guardar" una vez que haya ingresado todos los datos correctamente.</li>
+                                            <li>Si desea cancelar la operación, simplemente haga clic en el botón "Cancelar" o en el área fuera del modal para cerrarlo.</li>
+                                            <li>Si existe algún error en los datos ingresados, se le notificará con un mensaje de error para que pueda corregirlos.</li>
+                                        </ol>
+                                        <p>¡Gracias por utilizar nuestro servicio! Si tiene alguna inquietud, no dude en contactarnos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-3 mt-md-0">
+                        <!-- Aquí colocamos los botones que deseas mantener en la misma posición -->
+                        <button type="button" class="btn btn-secondary btn-lg ml-md-auto mr-4" data-dismiss="modal">
+                            <i class="fas fa-times"></i> Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-save"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

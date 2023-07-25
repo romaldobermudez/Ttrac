@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ttrac.Presentacion", "Ttrac.Presentacion.csproj", "{C1C8F8DE-6282-41BF-888C-DD4EB0F28EE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1C8F8DE-6282-41BF-888C-DD4EB0F28EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C8F8DE-6282-41BF-888C-DD4EB0F28EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C8F8DE-6282-41BF-888C-DD4EB0F28EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C8F8DE-6282-41BF-888C-DD4EB0F28EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E51971C-098D-43BA-99B4-634F490F5022}
+	EndGlobalSection
+EndGlobal
