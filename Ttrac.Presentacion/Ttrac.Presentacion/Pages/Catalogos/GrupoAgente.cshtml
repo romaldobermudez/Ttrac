@@ -1,13 +1,14 @@
 ﻿@page
-@model Ttrac.Presentacion.Pages.Canales.CanalesModel
+@model Ttrac.Presentacion.Pages.Catalogos.GrupoAgenteModel
 @{
 }
+
 
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4 bg-light">
             <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Canales de comunicación</li>
+            <li class="breadcrumb-item active" aria-current="page">Catálogos y Grupos</li>
         </ol>
     </nav>
 
@@ -20,7 +21,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="h6 text-gray-900 mb-4 fw-bold">Correo Electrónico</h6>
+                                <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos de Agentes Creados</h6>
                             </div>
                             <div class="col-md-6 d-md-flex justify-content-md-end">
                                 <button class="btn btn-primary me-md-2" type="button" data-toggle="tooltip" data-placement="top" title="Agregar Funcionario">
@@ -57,8 +58,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
-                                    <th scope="col">Dirección de correo electrónico</th>
-                                    <th scope="col">Grupos de Agentes Asignado</th>
+                                    <th scope="col">Nombre</th>
                                     <th scope="col">Estado</th>
                                 </tr>
                             </thead>
@@ -69,8 +69,7 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     </td>
-                                    <td>ejemplo_uno@domino.com</td>
-                                    <td>Todos</td>
+                                    <td>Atención de correo electrónico</td>
                                     <td>
                                         <span class="badge badge-success">
                                             <i class="fas fa-check-circle"></i> Activo
@@ -83,8 +82,7 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     </td>
-                                    <td>ejemplo_dos@domino.com</td>
-                                    <td>Soporte correo</td>
+                                    <td>Atención de página web</td>
                                     <td>
                                         <span class="badge badge-danger">
                                             <i class="fas fa-times-circle"></i> Inactivo
@@ -97,8 +95,7 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     </td>
-                                    <td>ejemplo_tres@domino.com</td>
-                                    <td>Soporte correo, Atención al cliente</td>
+                                    <td>Atención general</td>
                                     <td>
                                         <span class="badge badge-danger">
                                             <i class="fas fa-times-circle"></i> Inactivo
@@ -113,6 +110,7 @@
                         <div class="col-sm-12 col-md-6">
                             <div class="dataTables_length col-sm-12 col-md-6">
                                 <label class="mb-3 me-2">
+                                    <!-- Agregamos la clase mb-0 y me-2 -->
                                     Registros por página
                                     <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm col-md-3">
                                         <option value="5">5</option>

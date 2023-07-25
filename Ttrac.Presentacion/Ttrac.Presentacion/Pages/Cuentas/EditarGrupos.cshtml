@@ -1,0 +1,262 @@
+﻿@page
+@model Ttrac.Presentacion.Pages.Cuentas.EditarGruposModel
+@{
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-4 bg-light">
+            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gestionar Grupos</li>
+        </ol>
+    </nav>
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-3">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <!-- Primer Columna -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-5">
+                                    <h6 class="h6 text-gray-900 mb-3 fw-bold">Datos del Grupo</h6>
+                                    <form class="user">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="GrupoInput" placeholder="Nombre Grupo" value="Administrador" required>
+                                                    <label for="GrupoInput">
+                                                        <i class="fas fa-object-group ms-2 me-auto"></i> Nombre del Grupo
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Por favor, ingrese un nombre de administrador válido.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="nombreSistemaInput" placeholder="Sistema" value="HelpDesk" required>
+                                                    <label for="nombreSistemaInput">
+                                                        <i class="fas fa-laptop ms-2 me-auto"></i> Sistema
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Por favor, ingrese el sistema al que corresponde.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <div class="form-floating" style="height: auto;">
+                                                    <input type="text" class="form-control" id="descripcionInput" placeholder="Descripción" value="Los usuarios de este grupo son usuarios administradores del sistema HelpDesk, pueden cambiar toda la configuración del sistema" required>
+                                                    <label for="descripcionInput">
+                                                        <i class="fas fa-user-cog ms-2 me-auto"></i> Descripción
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Por favor, ingrese la descripción que corresponde al grupo y sistema seleccionados.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="tipoIdentificacion" aria-label="Default select example">
+                                                        <option selected disabled value="">Tipo de Rol...</option>
+                                                        <option value="1">Administrador Principal</option>
+                                                        <option value="2">Administrador Secundario</option>
+                                                        <option value="3">Agente</option>
+                                                        <option value="4">Cliente</option>
+                                                    </select>
+                                                    <label for="tipoIdentificacion">
+                                                        <i class="fas fa-id-badge ms-2 me-auto"></i> Tipo de Rol
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-5">
+                                    <div class="form-group">
+                                        <h6 class="h6 text-gray-900 mb-3 fw-bold">Roles o permisos que tienen los usuarios que pertenecen a este grupo</h6>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover table-sm" id="dataTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Rol</th>
+                                                        <th scope="col">Detalle</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Catálogos</td>
+                                                        <td>Modificar por completo los catálogos y grupos del sistema</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Respuestas Comunes</td>
+                                                        <td>Administrar las respuestas comunes que haya agregado cualquier agente</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Canales de Comunicación</td>
+                                                        <td>Gestionar los canales de comunicación, activarlos, desactivarlos, agregarles cuentas o direcciones a cada uno</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tercer Columna -->
+                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Funcionarios del Grupo</h6>
+                        <div class="row gx-4 gy-2 align-items-stretch">
+                            <div class="col-lg-6">
+                                <form class="funcionarios">
+
+                                    <div class="text-align-left border border-dark p-3 mb-3 rounded">
+
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Funcionarios Agregados</h6>
+
+                                        <div class="form-floating col-md-12 my-3">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" id="floatingInput" placeholder="Búsqueda" value="">
+                                                <button class="btn btn-primary" type="button" id="buscarBoton">
+                                                    <i class="fas fa-search"></i> Buscar
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Juan Pérez Pérez</div>
+                                                    801230456
+                                                </div>
+                                                <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                    804560123
+                                                </div>
+                                                <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Juan Pérez Pérez</div>
+                                                    801230456
+                                                </div>
+                                                <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                    804560123
+                                                </div>
+                                                <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <form class="funcionarios">
+                                    <div class="text-align-left border border-dark p-3 mb-3 rounded">
+
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Funcionarios Disponibles para Agregar</h6>
+
+                                        <div class="form-floating col-md-12 my-3">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" id="floatingInput" placeholder="Búsqueda" value="">
+                                                <button class="btn btn-primary" type="button" id="buscarBoton">
+                                                    <i class="fas fa-search"></i> Buscar
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Juan Pérez Pérez</div>
+                                                    801230456
+                                                </div>
+                                                <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                    804560123
+                                                </div>
+                                                <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Juan Pérez Pérez</div>
+                                                    801230456
+                                                </div>
+                                                <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                    804560123
+                                                </div>
+                                                <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <div class="text-center">
+                                            <button class="btn btn-primary w-100" type="submit" name="guardarCambios">
+                                                <i class="fas fa-save"></i> Guardar Cambios
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <div class="text-center">
+                                            <a class="btn btn-secondary w-100" href="/Cuentas/ListaCuentas">
+                                                <i class="fas fa-arrow-left"></i> Regresar
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

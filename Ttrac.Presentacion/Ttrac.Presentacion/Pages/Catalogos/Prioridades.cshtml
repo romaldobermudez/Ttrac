@@ -1,5 +1,5 @@
 ﻿@page
-@model Ttrac.Presentacion.Pages.Canales.CanalesModel
+@model Ttrac.Presentacion.Pages.Catalogos.PrioridadesModel
 @{
 }
 
@@ -7,7 +7,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4 bg-light">
             <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Canales de comunicación</li>
+            <li class="breadcrumb-item active" aria-current="page">Catálogos y Grupos</li>
         </ol>
     </nav>
 
@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="h6 text-gray-900 mb-4 fw-bold">Correo Electrónico</h6>
+                                <h6 class="h6 text-gray-900 mb-4 fw-bold">Prioridades de Tiquetes Registradas</h6>
                             </div>
                             <div class="col-md-6 d-md-flex justify-content-md-end">
                                 <button class="btn btn-primary me-md-2" type="button" data-toggle="tooltip" data-placement="top" title="Agregar Funcionario">
@@ -57,8 +57,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
-                                    <th scope="col">Dirección de correo electrónico</th>
-                                    <th scope="col">Grupos de Agentes Asignado</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Peso</th>
+                                    <th scope="col">Color</th>
                                     <th scope="col">Estado</th>
                                 </tr>
                             </thead>
@@ -69,8 +70,9 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     </td>
-                                    <td>ejemplo_uno@domino.com</td>
-                                    <td>Todos</td>
+                                    <td>Urgente</td>
+                                    <td>10</td>
+                                    <td style="background-color: red; width: 30px; height: 30px; border-radius: 80%; display: flex;"></td>
                                     <td>
                                         <span class="badge badge-success">
                                             <i class="fas fa-check-circle"></i> Activo
@@ -83,8 +85,9 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     </td>
-                                    <td>ejemplo_dos@domino.com</td>
-                                    <td>Soporte correo</td>
+                                    <td>Alta</td>
+                                    <td>5</td>
+                                    <td style="background-color: yellow; width: 30px; height: 30px; border-radius: 80%; display: flex;"></td>
                                     <td>
                                         <span class="badge badge-danger">
                                             <i class="fas fa-times-circle"></i> Inactivo
@@ -97,8 +100,9 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     </td>
-                                    <td>ejemplo_tres@domino.com</td>
-                                    <td>Soporte correo, Atención al cliente</td>
+                                    <td>Baja</td>
+                                    <td>1</td>
+                                    <td style="background-color: green; width: 30px; height: 30px; border-radius: 80%; display: flex;"></td>
                                     <td>
                                         <span class="badge badge-danger">
                                             <i class="fas fa-times-circle"></i> Inactivo

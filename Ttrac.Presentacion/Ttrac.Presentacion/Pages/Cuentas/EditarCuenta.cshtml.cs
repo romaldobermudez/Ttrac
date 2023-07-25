@@ -1,0 +1,11 @@
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace Ttrac.Presentacion.Pages.Cuentas
+{
+    public class EditarCuentaModel : PageModel
+    {
+        public void OnGet()
+        {
+        }
+    }
+}

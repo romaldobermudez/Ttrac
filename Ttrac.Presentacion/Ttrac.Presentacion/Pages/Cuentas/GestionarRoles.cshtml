@@ -1,5 +1,5 @@
 ﻿@page
-@model Ttrac.Presentacion.Pages.Canales.CanalesModel
+@model Ttrac.Presentacion.Pages.Cuentas.GestionarRolesModel
 @{
 }
 
@@ -7,7 +7,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4 bg-light">
             <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Canales de comunicación</li>
+            <li class="breadcrumb-item active" aria-current="page">Gestionar Roles</li>
         </ol>
     </nav>
 
@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6 class="h6 text-gray-900 mb-4 fw-bold">Correo Electrónico</h6>
+                                <h6 class="h6 text-gray-900 mb-4 fw-bold">Lista de Grupos Disponibles</h6>
                             </div>
                             <div class="col-md-6 d-md-flex justify-content-md-end">
                                 <button class="btn btn-primary me-md-2" type="button" data-toggle="tooltip" data-placement="top" title="Agregar Funcionario">
@@ -34,8 +34,9 @@
                                 <div class="form-floating w-100">
                                     <select class="form-select" id="Grupos" aria-label="Default select example">
                                         <option selected disabled value="">Todos...</option>
-                                        <option value="1">Activo</option>
-                                        <option value="2">Inactivo</option>
+                                        <option value="1">Administradores</option>
+                                        <option value="2">Agentes</option>
+                                        <option value="3">Clientes</option>
                                     </select>
                                     <label for="Grupos">Tipo de Grupo</label>
                                 </div>
@@ -56,54 +57,31 @@
                         <table class="table table-bordered table-hover table-sm" id="dataTable">
                             <thead>
                                 <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Dirección de correo electrónico</th>
-                                    <th scope="col">Grupos de Agentes Asignado</th>
-                                    <th scope="col">Estado</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Tipo de Grupo</th>
+                                    <th scope="col">Descripción</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <button class="btn btn-sm btn-light">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </button>
-                                    </td>
-                                    <td>ejemplo_uno@domino.com</td>
-                                    <td>Todos</td>
-                                    <td>
-                                        <span class="badge badge-success">
-                                            <i class="fas fa-check-circle"></i> Activo
-                                        </span>
-                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>Administrador principal</td>
+                                    <td>Puede tener acceso a los mantenimientos y reportes del sistema para crear, modificar o eliminar uno o varios usuarios.</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <button class="btn btn-sm btn-light">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </button>
-                                    </td>
-                                    <td>ejemplo_dos@domino.com</td>
-                                    <td>Soporte correo</td>
-                                    <td>
-                                        <span class="badge badge-danger">
-                                            <i class="fas fa-times-circle"></i> Inactivo
-                                        </span>
-                                    </td>
+                                    <th scope="row">2</th>
+                                    <td>Administrador secundario</td>
+                                    <td>Puede tener acceso a modificar o eliminar uno o varios usuarios.</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <button class="btn btn-sm btn-light">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </button>
-                                    </td>
-                                    <td>ejemplo_tres@domino.com</td>
-                                    <td>Soporte correo, Atención al cliente</td>
-                                    <td>
-                                        <span class="badge badge-danger">
-                                            <i class="fas fa-times-circle"></i> Inactivo
-                                        </span>
-                                    </td>
+                                    <th scope="row">3</th>
+                                    <td>Agente</td>
+                                    <td>Se encargará únicamente de atender los tiquetes que le son asignados.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Cliente</td>
+                                    <td>Se encargará de abrir y dar seguimiento de los tiquetes necesarios según sus necesidades.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -113,6 +91,7 @@
                         <div class="col-sm-12 col-md-6">
                             <div class="dataTables_length col-sm-12 col-md-6">
                                 <label class="mb-3 me-2">
+                                    <!-- Agregamos la clase mb-0 y me-2 -->
                                     Registros por página
                                     <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm col-md-3">
                                         <option value="5">5</option>
@@ -122,7 +101,6 @@
                                 </label>
                             </div>
                         </div>
-
 
                         <div class="col-md-6">
                             <div class="dataTables_paginate paging_simple_numbers justify-content-end" id="dataTable_paginate">
@@ -134,13 +112,13 @@
                                     <li class="paginate_button page-item active">
                                         <a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
                                     </li>
-                                    <li class="paginate_button page-item ">
+                                    <li class="paginate_button page-item">
                                         <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">2</a>
                                     </li>
-                                    <li class="paginate_button page-item ">
+                                    <li class="paginate_button page-item">
                                         <a href="#" aria-controls="dataTable" data-dt-idx="3" tabindex="0" class="page-link">3</a>
                                     </li>
-                                    <li class="paginate_button page-item ">
+                                    <li class="paginate_button page-item">
                                         <a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0" class="page-link">4</a>
                                     </li>
                                     <li class="paginate_button page-item next" id="dataTable_next">

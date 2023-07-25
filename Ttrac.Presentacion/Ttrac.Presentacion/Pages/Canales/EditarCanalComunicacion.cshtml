@@ -1,0 +1,218 @@
+﻿@page
+@model Ttrac.Presentacion.Pages.Canales.EditarCanalComunicacionModel
+@{
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-4 bg-light">
+            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Agregar Grupo de Agentes</li>
+        </ol>
+    </nav>
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-3">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row gx-4 gy-2">
+
+                        <!-- Primer Colunna -->
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <form class="user">
+                                    <div class="text-align-left">
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Datos del Correo Electrónico</h6>
+
+                                        <div class="form-floating col-md-5">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="yarmaria22@gmail.com" required>
+                                            <label for="floatingInput" class="form-label">
+                                                <i class="fas fa-envelope ms-2 me-auto"></i> Correo Eléctronico
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                Por favor, ingrese un correo electrónico válido.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Segunda Columna -->
+                        <div class="col-md-6">
+                            <div class="p-5">
+                                <div class="form-group">
+                                    <h6 class="h6 text-gray-900 mb-3 fw-bold">Configuración Predeterminada de los Tiquetes</h6>
+
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="tipoCategoria" aria-label="Default select example">
+                                                <option selected disabled value="">Categoría...</option>
+                                                <option value="1">Sin especificar</option>
+                                                <option value="2">Administrador Secundario</option>
+                                                <option value="3">Agente</option>
+                                                <option value="4">Cliente</option>
+                                            </select>
+                                            <label for="tipoCategoria">
+                                                <i class="fas fa-id-badge ms-2 me-auto"></i> Categoría
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="tipoPrioridad" aria-label="Default select example">
+                                                <option selected disabled value="">Prioridad...</option>
+                                                <option value="1">Sin especificar</option>
+                                                <option value="2">Administrador Secundario</option>
+                                                <option value="3">Agente</option>
+                                                <option value="4">Cliente</option>
+                                            </select>
+                                            <label for="tipoPrioridad">
+                                                <i class="fas fa-id-badge ms-2 me-auto"></i> Prioridad
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tercer Columna -->
+                    <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos que Atenderán los Tiquetes</h6>
+
+                    <div class="col-md-12 mb-3">
+                        <div class="form-floating">
+                            <select class="form-select" id="tipoGrupo" aria-label="Default select example">
+                                <option selected disabled value="">Grupos...</option>
+                                <option value="1">Especificar</option>
+                                <option value="2">Administrador Secundario</option>
+                                <option value="3">Agente</option>
+                                <option value="4">Cliente</option>
+                            </select>
+                            <label for="tipoGrupo">
+                                <i class="fas fa-id-badge ms-2 me-auto"></i> Grupos
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row gx-4 gy-2 align-items-stretch">
+                        <div class="col-lg-6">
+                            <form class="funcionarios">
+                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+
+                                    <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos de Agentes que Atenderán los Tiquetes</h6>
+
+                                    <div class="form-floating col-md-12 my-3">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" id="floatingInput" placeholder="Búsqueda" value="">
+                                            <button class="btn btn-primary" type="button" id="buscarBoton">
+                                                <i class="fas fa-search"></i> Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Atención al cliente</div>
+                                                6:00 - 16:00 (L-V)
+                                            </div>
+                                            <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Atención de correo electrónico</div>
+                                                8:00 - 17:00 (L-V)
+                                            </div>
+                                            <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-md-6">
+                            <form class="funcionarios">
+                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+
+                                    <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos de Agentes Disponibles para Agregar</h6>
+
+                                    <div class="form-floating col-md-12 my-3">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" id="floatingInput" placeholder="Búsqueda" value="">
+                                            <button class="btn btn-primary" type="button" id="buscarBoton">
+                                                <i class="fas fa-search"></i> Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Atención al cliente</div>
+                                                6:00 - 16:00 (L-V)
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Atención de correo electrónico</div>
+                                                8:00 - 17:00 (L-V)
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Agregar Regresar y Eliminar-->
+                    <div class="row gx-4 gy-2">
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-block" type="submit">
+                                    <i class="fas fa-save"></i> Guardar Cambios
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <button class="btn btn-outline-danger" type="submit">
+                                    <i class="fas fa-times"></i> Eliminar correo electrónico
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Regresar -->
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center d-flex">
+                                <a class="btn btn-secondary btn-block me-2" href="/Cuentas/ListaCuentas">
+                                    <i class="fas fa-arrow-left"></i> Regresar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

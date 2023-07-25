@@ -1,0 +1,238 @@
+﻿@page
+@model Ttrac.Presentacion.Pages.Cuentas.ListaCuentasModel
+@{
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-4 bg-light">
+            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cuentas</li>
+        </ol>
+    </nav>
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-3">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        @*Primer Colunna*@
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h1 text-gray-900 mb-4">Mi Perfil</h1>
+                                </div>
+                                <form class="user">
+
+                                    <div class="form-floating" align="center">
+                                        <img src="~/img/person-profile.svg" height="120" width="120">
+                                    </div>
+
+                                    <div class="text-align-left">
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Información de Contacto</h6>
+                                        <ol class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">+506 7153 4556</div>
+                                                    Teléfono Oficial
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold"> info@tecoop.cr</div>
+                                                    Correo Eléctronico
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">www.tecoop.cr</div>
+                                                    Web
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        @* Segunda colunna*@
+
+                        <div class="col-lg-6">
+                            <form class="user">
+                                <br>
+                                <div class="form-group row">
+                                    <div class="text-align-left">
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Datos de la Cuenta</h6>
+                                    </div>
+
+                                    <div class="form-floating col-md-6">
+                                        <select class="form-select" id="tipoCuenta" aria-label="Default select example">
+                                            <option selected disabled value="">Tipo de Cuenta...</option>
+                                            <option value="1">Administrador Principal</option>
+                                            <option value="2">Administrador Secundario</option>
+                                            <option value="3">Agente</option>
+                                            <option value="4">Cliente</option>
+                                        </select>
+                                        <label for="tipoCuenta">
+                                            <i class="fas fa-user ms-2 me-auto"></i> Tipo de Cuenta
+                                        </label>
+                                    </div>
+
+                                    <div class="form-floating col-md-5">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="yarmaria22@gmail.com" readonly required>
+                                        <label for="floatingInput" class="form-label">
+                                            <i class="fas fa-envelope ms-2 me-auto"></i> Correo Eléctronico
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese un correo electrónico válido.
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="text-align-left">
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Datos Personales</h6>
+                                    </div>
+
+                                    <div class="form-floating col-md-6 mb-3">
+                                        <select class="form-select" id="tipoIdentificacion" aria-label="Default select example">
+                                            <option selected disabled value="">Tipo de Identificación...</option>
+                                            <option value="1">Cédula Física</option>
+                                            <option value="2">Cédula Jurídica</option>
+                                        </select>
+                                        <label for="tipoIdentificacion">
+                                            <i class="fas fa-id-card ms-2 me-auto"></i> Tipo de Identificación
+                                        </label>
+                                    </div>
+
+                                    <div class="form-floating col-md-5 mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="Número de Identificación" value="117950605" readonly required>
+                                        <label for="floatingInput">
+                                            <i class="fas fa-address-card ms-2 me-auto"></i> Identificación
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese una identificación válida.
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-floating col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="nombreInput" placeholder="Nombre" value="Yarlín" readonly required>
+                                        <label for="nombreInput">
+                                            <i class="fas fa-user ms-2 me-auto"></i> Nombre
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese su nombre.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating col-md-5 mb-3">
+                                        <input type="text" class="form-control" id="primerApellidoInput" placeholder="Primer Apellido" value="Granados" readonly required>
+                                        <label for="primerApellidoInput">
+                                            <i class="fas fa-user ms-2 me-auto"></i> Primer Apellido
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese su primer apellido.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating col-md-6 mb-3">
+                                        <input type="text" class="form-control" id="segundoApellidoInput" placeholder="Segundo Apellido" value="Solano" readonly required>
+                                        <label for="segundoApellidoInput">
+                                            <i class="fas fa-user ms-2 me-auto"></i> Segundo Apellido
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese su segundo apellido.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating col-md-5 mb-3">
+                                        <input type="date" class="form-control" id="fechaNacimientoInput" value="2000-11-22" readonly required>
+                                        <label for="fechaNacimientoInput">
+                                            <i class="fas fa-calendar-alt ms-2 me-auto"></i> Fecha de nacimiento
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese su fecha de nacimiento.
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-floating col-md-11 mb-3">
+                                        <input type="text" class="form-control" id="nacionalidadInput" placeholder="Nacionalidad" value="Costarricense" readonly required>
+                                        <label for="nacionalidadInput">
+                                            <i class="fas fa-globe ms-2 me-auto"></i> Nacionalidad
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese su nacionalidad.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating col-md-11 mb-3">
+                                        <input type="text" class="form-control" id="direccionInput" placeholder="Dirección" value="Costa Rica. Alajuela, Alajuela, San Antonio" readonly required>
+                                        <label for="direccionInput">
+                                            <i class="fas fa-map-marker-alt ms-2 me-auto"></i> Dirección
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, ingrese la dirección de su residencia.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Botones de Editar Perfil y Cambiar Contraseña -->
+                                <div class="col-12 mb-3">
+                                    <div class="text-start">
+                                        <a class="btn btn-secondary" href="/Cuentas/EditarCuenta">
+                                            <i class="fas fa-user-edit"></i> Editar Perfil
+                                        </a>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cambiarContrasennaModal">
+                                            <i class="fas fa-key"></i> Cambiar Contraseña
+                                        </button>
+                                        <a class="btn btn-outline-danger" href="/Inicio/Ingreso">
+                                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Modal para cambiar la contraseña -->
+                            <div class="modal fade" id="cambiarContrasennaModal" tabindex="-1" aria-labelledby="cambiarContrasennaModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="cambiarContrasennaModalLabel">Cambiar Contraseña</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control" id="contrasennaActual" placeholder="Contraseña actual" required>
+                                                    <label for="contrasennaActual">Contraseña actual</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control" id="nuevaContrasenna" placeholder="Nueva contraseña" required>
+                                                    <label for="nuevaContrasenna">Nueva contraseña</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input type="password" class="form-control" id="confirmarContrasenna" placeholder="Confirmar nueva contraseña" required>
+                                                    <label for="confirmarContrasenna">Confirmar nueva contraseña</label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary" onclick="guardarContrasenna()">Guardar Cambios</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

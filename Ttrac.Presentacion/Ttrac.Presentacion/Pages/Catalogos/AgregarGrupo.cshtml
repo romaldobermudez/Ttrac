@@ -1,0 +1,257 @@
+﻿@page
+@model Ttrac.Presentacion.Pages.Catalogos.AgregarGrupoModel
+@{
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-4 bg-light">
+            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Agregar Grupo de Agentes</li>
+        </ol>
+    </nav>
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-3">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row gx-4 gy-2">
+
+                        <!-- Primer Colunna -->
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <form class="user">
+                                    <div class="text-align-left">
+                                        <h6 class="h6 text-gray-900 mb-4 fw-bold">Horarios de Atención del Grupo</h6>
+
+                                        <!-- Formulario para agregar nuevos elementos -->
+                                        <div class="col-12 mb-3">
+                                            <div class="text-end">
+                                                <button type="submit" class="btn btn-primary">
+                                                    <i class="fas fa-plus"></i> Agregar
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">8:00 - 17:00</div>
+                                                    L-V
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-sm btn-primary me-1" title="Editar">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-danger" title="Eliminar">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">18:00 - 21:00</div>
+                                                    L, M, V
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-sm btn-primary me-1" title="Editar">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-danger" title="Eliminar">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">8:00 - 12:00</div>
+                                                    S-D
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-sm btn-primary me-1" title="Editar">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-danger" title="Eliminar">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Segunda Columna -->
+                        <div class="col-md-6">
+                            <div class="p-5">
+                                <div class="form-group">
+                                    <h6 class="h6 text-gray-900 mb-3 fw-bold">Datos del Grupo de Agentes</h6>
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="datosGrupoInput" placeholder="Datos Grupo" value="Atención de redes sociales" required>
+                                            <label for="datosGrupoInput">
+                                                <i class="fas fa-laptop ms-2 me-auto"></i> Nombre
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                Por favor, ingrese el nombre del grupo de agente al que corresponde.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tercer Columna -->
+                    <h6 class="h6 text-gray-900 mb-4 fw-bold">Agentes del Grupo</h6>
+                    <div class="row gx-4 gy-2 align-items-stretch">
+                        <div class="col-lg-6">
+                            <form class="funcionarios">
+                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+
+                                    <h6 class="h6 text-gray-900 mb-4 fw-bold">Agentes Agregados</h6>
+
+                                    <div class="form-floating col-md-12 my-3">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" id="floatingInput" placeholder="Búsqueda" value="">
+                                            <button class="btn btn-primary" type="button" id="buscarBoton">
+                                                <i class="fas fa-search"></i> Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Juan Pérez Pérez</div>
+                                                801230456
+                                            </div>
+                                            <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                804560123
+                                            </div>
+                                            <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Juan Pérez Pérez</div>
+                                                801230456
+                                            </div>
+                                            <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                804560123
+                                            </div>
+                                            <button type="button" class="btn btn-outline-danger" aria-label="Eliminar">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-md-6">
+                            <form class="funcionarios">
+                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+
+                                    <h6 class="h6 text-gray-900 mb-4 fw-bold">Agentes Disponibles para Agregar</h6>
+
+                                    <div class="form-floating col-md-12 my-3">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" id="floatingInput" placeholder="Búsqueda" value="">
+                                            <button class="btn btn-primary" type="button" id="buscarBoton">
+                                                <i class="fas fa-search"></i> Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Juan Pérez Pérez</div>
+                                                801230456
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                804560123
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Juan Pérez Pérez</div>
+                                                801230456
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">Mario Ramírez Ramírez</div>
+                                                804560123
+                                            </div>
+                                            <button type="button" class="btn btn-outline-success" aria-label="Agregar">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Agregar y Regresar -->
+                    <div class="row gx-4 gy-2">
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-block ml-2" type="submit">
+                                    <i class="fas fa-plus"></i> Agregar grupo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Regresar -->
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center d-flex">
+                                <a class="btn btn-secondary btn-block me-2" href="/Cuentas/ListaCuentas">
+                                    <i class="fas fa-arrow-left"></i> Regresar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
