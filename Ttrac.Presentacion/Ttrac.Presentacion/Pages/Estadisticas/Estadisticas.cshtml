@@ -6,7 +6,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb mt-4 bg-light">
             <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Estadíticas</li>
+            <li class="breadcrumb-item active" aria-current="page">Estadísticas</li>
         </ol>
     </nav>
 
@@ -19,58 +19,174 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        @*Primer Colunna*@
-                        <div class="col-lg-6">
-                            <div class="p-5">
-                                <div class="text-center">
+                        @*Primera fila*@
+                        <div class="col-lg-12">
+                            <div class="p-4">
+                                <div class="text-left">
                                     <h1 class="h4 text-gray-900 mb-4">Estadísticas</h1>
                                 </div>
-                                <form class="user" asp-controller="Ingreso" asp-action="Autenticar">
+ 
+                            </div>
+                      
 
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Correo eletrónico</label>
-                                        <div class="invalid-feedback">
-                                            Por favor, ingrese un correo electrónico válido.
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                      
+                                            <div class="row px-2 align-items-center">
+                                                <div class="col-lg-9 text-center">
+                                                    <p class="card-text"><small> <b>Números de los tiquetes de hoy</b></small></p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                <a href="/Estadisticas/NumeroTiquetes" class="btn btn-sm btn-link">
+                                                    <small><b><i class="fas fa-clipboard-list"></i> Detalles</b></small>
+                                                </a>
+                                                </div>
+                                            </div>
+                                     
+                                        <div class="card my-1 mx-3 border-0 shadow-sm bg-light">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+
+                                                        <p class="card-text"><small>Tiquetes totales</small></p>
+                                                        <h6 class="card-title"><b>31</b></h6>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>Tiquetes nuevos</small></p>
+                                                        <h6 class="card-title"><b>15</b></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>Tiquetes cerrados</small></p>
+                                                        <h6 class="card-title"><b>13</b></h6>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>Sin primera respuesta</small></p>
+                                                        <h6 class="card-title"><b>3</b></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-floating">
-                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                        <label for="floatingPassword">Contraseña</label>
-                                    </div>
 
-                                    <div class="form-group mt-4">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">
-                                                Recuerdame
-                                            </label>
+                                    <div class="col-lg-6">
+                                        <div class="row px-2 align-items-center ">
+                                            <div class="col-lg-9 text-center">
+                                                <p class="card-text"><small> <b>Promedios de tiempo de hoy</b></small></p>
+                                            </div>
+                                            <div class="col-lg-3 ">
+                                                <a href="/Estadisticas/PromedioTiempo" class="btn btn-sm btn-link">
+                                                    <small><b><i class="fas fa-clipboard-list"></i> Detalles</b></small>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card my-1 mx-3 border-0 shadow-sm bg-light">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>Primera respuesta</small></p>
+                                                        <h6 class="card-title"><b>5m</b></h6>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>Segunda respuesta</small></p>
+                                                        <h6 class="card-title"><b>3m</b></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>De resolución</small></p>
+                                                        <h6 class="card-title"><b>2h</b></h6>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <p class="card-text"><small>Espera (entre respuestas)</small></p>
+                                                        <h6 class="card-title"><b>6m</b></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <button type="submit" class="btn btn-primary btn-block">
-                                        Iniciar Sesión
-                                    </button>
-
-
-                                </form>
-                                <hr>
-                                <div class="text-center mt-4">
-                                    <a asp-area="" asp-controller="RecuperarContrasena" asp-action="RecuperarContrasena">¿Olvidaste la contraseña?</a>
-                                </div>
-                                <div class="text-center mt-2">
-                                    <a href="/Inicio/Registro">¿No tienes una cuenta? <b>Registrate</b></a>
                                 </div>
                             </div>
-                        </div>
 
-                        @* Segunda colunna*@
 
-                        <div class="col-lg-6"></div>
+                      
 
-                    </div>
+                        @* Segunda fila*@
+
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+
+                                        <div class="row px-2 align-items-center">
+                                            <div class="col-lg-9 text-center">
+                                                <p class="card-text"><small> <b>Tiquetes de los últimos dos meses (por mes)</b></small></p>
+                                            </div>
+                                            <div class="col-lg-3  ">
+                                                <a href="/Estadisticas/TiquetesPorMes" class="btn btn-sm btn-link">
+                                                    <small><b><i class="fas fa-clipboard-list"></i> Detalles</b></small>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card my-1 mx-3 border-0 shadow-sm bg-light">
+                                             
+                  
+                                                <!-- Card Body -->
+                                            <div class="card-body">
+                                                <div class="chart-area">
+                                                    <canvas id="myAreaChart"></canvas>
+                                                </div>
+                                                <hr>
+            
+                                            </div>
+                                            </div>
+                                       
+
+
+
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                       <div class="row px-2 align-items-center ">
+                                        <div class="col-lg-9 text-center">
+                                            <p class="card-text"><small> <b>Tiquetes del último mes (por día de la semana)
+                                            </b></small></p>
+                                        </div>
+                                        <div class="col-lg-3 ">
+                                          <a href="/Estadisticas/TiquetesPorDia" class="btn btn-sm btn-link">
+                                                        <small><b><i class="fas fa-clipboard-list"></i> Detalles</b></small>
+                                                    </a>
+                                        </div>
+                                    </div>
+                                        <div class="card my-1 mx-3 border-0 shadow-sm bg-light">
+
+
+                                            <div class="card-body">
+                                                <div class="chart-bar">
+                                                    <canvas id="myBarChart"></canvas>
+                                                </div>
+                                                <hr>
+                    
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+       
                 </div>
             </div>
-        </div>
+                    </div>
     </div>
 </div>
+</div>
+  </div>

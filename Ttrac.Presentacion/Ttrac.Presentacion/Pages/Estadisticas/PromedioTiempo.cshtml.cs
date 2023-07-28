@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Ttrac.Presentacion.Pages.Cuentas
+namespace Ttrac.Presentacion.Pages.Estadisticas
 {
-    public class ListaCuentasModel : PageModel
+    public class PromedioTiempoModel : PageModel
     {
         public void OnGet()
         {
