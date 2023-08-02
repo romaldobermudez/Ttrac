@@ -1,27 +1,20 @@
 ﻿@page
 @model Ttrac.Presentacion.Pages.Canales.EditarCanalComunicacionModel
-@{
-}
-
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Agregar Grupo de Agentes</li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Canales/Canales"><i class="fas fa-fw fa-comments"></i> Canales de comunicación</a></li>
+            <li class="breadcrumb-item">Información de Contacto</li>
         </ol>
     </nav>
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
-
         <div class="col-lg-12 col-md-9">
-
-            <div class="card o-hidden border-0 shadow-lg my-3">
-                <div class="card-body p-0">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
                     <!-- Nested Row within Card Body -->
-                    <div class="row gx-4 gy-2">
-
-                        <!-- Primer Colunna -->
+                    <div class="row">
+                        @*Primera fila*@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <form class="user">
@@ -103,7 +96,7 @@
                     <div class="row gx-4 gy-2 align-items-stretch">
                         <div class="col-lg-6">
                             <form class="funcionarios">
-                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+                                <div class="text-align-left border p-3 mb-3 rounded">
 
                                     <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos de Agentes que Atenderán los Tiquetes</h6>
 
@@ -144,7 +137,7 @@
 
                         <div class="col-md-6">
                             <form class="funcionarios">
-                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+                                <div class="text-align-left border p-3 mb-3 rounded">
 
                                     <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos de Agentes Disponibles para Agregar</h6>
 
@@ -199,15 +192,6 @@
                                 <button class="btn btn-outline-danger" type="submit">
                                     <i class="fas fa-times"></i> Eliminar correo electrónico
                                 </button>
-                            </div>
-                        </div>
-
-                        <!-- Botones de Regresar -->
-                        <div class="col-md-6 mb-3">
-                            <div class="text-center d-flex">
-                                <a class="btn btn-secondary btn-block me-2" href="/Cuentas/ListaCuentas">
-                                    <i class="fas fa-arrow-left"></i> Regresar
-                                </a>
                             </div>
                         </div>
                     </div>

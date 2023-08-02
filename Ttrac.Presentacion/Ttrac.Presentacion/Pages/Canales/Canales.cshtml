@@ -1,31 +1,26 @@
 ﻿@page
 @model Ttrac.Presentacion.Pages.Canales.CanalesModel
-@{
-}
-
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Canales de comunicación</li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Canales/Canales"><i class="fas fa-fw fa-comments"></i> Canales de comunicación</a></li>
         </ol>
     </nav>
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
-        <div class="card o-hidden border-0 shadow-lg my-3">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
-                    <div class="card-body">
-                        <div class="row">
+        <div class="col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        @*Primera fila*@
                             <div class="col-md-6">
                                 <h6 class="h6 text-gray-900 mb-4 fw-bold">Correo Electrónico</h6>
                             </div>
                             <div class="col-md-6 d-md-flex justify-content-md-end">
-                                <button class="btn btn-primary me-md-2" type="button" data-toggle="tooltip" data-placement="top" title="Agregar Funcionario">
+                            <a class="btn btn-primary me-md-2" href=" /Canales/EditarCanalComunicacion" data-toggle="tooltip" data-placement="top" title="Agregar Funcionario">
                                     <i class="fas fa-plus me-2"></i>Agregar
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -52,7 +47,7 @@
                         </div>
                     </div>
 
-                    <div class="table-responsive">
+                <div class="table-responsive pl-4 pr-4">
                         <table class="table table-bordered table-hover table-sm" id="dataTable">
                             <thead>
                                 <tr>
@@ -109,7 +104,7 @@
                         </table>
                     </div>
 
-                    <div class="row">
+                <div class="row pl-4 pr-4">
                         <div class="col-sm-12 col-md-6">
                             <div class="dataTables_length col-sm-12 col-md-6">
                                 <label class="mb-3 me-2">
@@ -154,4 +149,3 @@
             </div>
         </div>
     </div>
-</div>
