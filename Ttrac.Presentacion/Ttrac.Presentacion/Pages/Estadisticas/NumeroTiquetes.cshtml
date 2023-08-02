@@ -1,72 +1,56 @@
 ﻿@page
 @model Ttrac.Presentacion.Pages.Estadisticas.NumeroTiquetesModel
-@{
-}
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Estadisticas/Estadisticas"><i class="fas fa-tachometer-alt"></i> Estadíticas</a></li>
             <li class="breadcrumb-item active" aria-current="page">Número de Tiquetes de hoy</li>
         </ol>
     </nav>
-
-    <!-- Outer Row -->
     <div class="row justify-content-center">
-
         <div class="col-lg-12 col-md-9">
-
-            <div class="card o-hidden border-0 shadow-lg my-3">
-                <div class="card-body p-0">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
                         @*Primera fila*@
                         <div class="col-lg-12">
                             <div class="p-4">
                                 <div class="text-left">
-                                    <h1 class="h4 text-gray-900 mb-4">Estadísticas - Número de Tiquetes de hoy</h1>
+                                    <h1 class="h4 text-gray-900">Estadísticas - Número de Tiquetes de hoy</h1>
                                 </div>
-
                             </div>
-
-
-                          
-                                <div class="row">
-                                    <div class="col-lg-9 ">
-                                      
-                                   
-                                        <div class="row px-2 align-items-center">
-                                            <div class="col-lg-12 text-center">
-                                                <p class="card-text"><small> <b>Números de los tiquetes</b></small></p>
-                                            </div>
-             
+                            <div class="row">
+                                <div class="col-lg-9 ">
+                                    <div class="row px-2 align-items-center">
+                                        <div class="col-lg-12 text-center">
+                                            <p class="card-text"><small> <b>Números de los tiquetes</b></small></p>
                                         </div>
-
-                                        <div class="card my-1 mx-3 border-0 shadow-sm bg-light">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-
-                                                        <p class="card-text"><small>Tiquetes totales</small></p>
-                                                        <h6 class="card-title"><b>31</b></h6>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <p class="card-text"><small>Tiquetes nuevos</small></p>
-                                                        <h6 class="card-title"><b>15</b></h6>
-                                                    </div>
+                                    </div>
+                                    <div class="card my-1 mx-3 border-0 shadow-sm bg-light">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <p class="card-text"><small>Tiquetes totales</small></p>
+                                                    <h6 class="card-title"><b>31</b></h6>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <p class="card-text"><small>Tiquetes cerrados</small></p>
-                                                        <h6 class="card-title"><b>13</b></h6>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <p class="card-text"><small>Sin primera respuesta</small></p>
-                                                        <h6 class="card-title"><b>3</b></h6>
-                                                    </div>
+                                                <div class="col-lg-6">
+                                                    <p class="card-text"><small>Tiquetes nuevos</small></p>
+                                                    <h6 class="card-title"><b>15</b></h6>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <p class="card-text"><small>Tiquetes cerrados</small></p>
+                                                    <h6 class="card-title"><b>13</b></h6>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <p class="card-text"><small>Sin primera respuesta</small></p>
+                                                    <h6 class="card-title"><b>3</b></h6>
                                                 </div>
                                             </div>
                                         </div>
-
+                                    </div>
                                     <div class="row mx-1 my-2">
                                         @* Tabla de contenido*@
                                         <div class="table-responsive">
@@ -110,7 +94,6 @@
                                             </table>
                                         </div>
                                     </div>
-
                                     <div class="container-fluid">
                                         <div class="row">
                                             <!-- Selección de número de registros -->
@@ -132,7 +115,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <!-- Paginación -->
                                             <div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-end">
                                                 <div class="px-5 mb-4">
@@ -157,21 +139,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                 
-                                    </div>
-
-
-
-
-
-
+                                </div>
                                 @* Segunda columna*@
-
                                 <div class="col-lg-3 bg-light">
-
-
-
-
                                     <div class="row">
                                         @* Filtros *@
                                         <div class="col-lg-12 col-md-2 ">
@@ -180,9 +150,7 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <div class="row">
+                                  <div class="row">
                                         @* Selección periodo de tiempo *@
                                         <div class="col-lg-12 col-md-2 ">
                                             <div class="px-3 py-2">
@@ -220,7 +188,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         @* Selección de grupo de agentes *@
                                         <div class="col-lg-12 col-md-2 ">
@@ -247,7 +214,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         @* Exportar *@
                                         <div class="col-lg-12 col-md-2 ">
@@ -256,7 +222,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         @* Métodos de exportación *@
                                         <div class="col-lg-12 col-md-2 ">
@@ -265,13 +230,10 @@
                                                 <select class="form-select rounded custom-select">
                                                     <option value="todos">PDF(.pdf)</option>
                                                     <option value="sistema">Excel (.xlsx)</option>
-                                                  
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="row">
                                         @* Botón de aplicar filtros *@
                                         <div class="col-lg-12 col-md-2 ">
@@ -280,19 +242,11 @@
                                                 <button type="button" class="btn btn-primary btn-block">
                                                     Exportar
                                                 </button>
-
-
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-      
-                                </div>
-                         
-
-
-
+                            </div>
                         </div>
                     </div>
                 </div>

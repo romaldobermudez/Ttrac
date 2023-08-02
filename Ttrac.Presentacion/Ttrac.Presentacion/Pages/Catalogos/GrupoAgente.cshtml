@@ -2,31 +2,28 @@
 @model Ttrac.Presentacion.Pages.Catalogos.GrupoAgenteModel
 @{
 }
-
-
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Catálogos y Grupos</li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Catalogos/GrupoAgente"><i class="fas fa-fw fa-cog"></i> Catálogos y Grupos</a></li>
         </ol>
     </nav>
-
-    <!-- Outer Row -->
     <div class="row justify-content-center">
-        <div class="card o-hidden border-0 shadow-lg my-3">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
-                <div class="row">
+        <div class="col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        @*Primera fila*@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <h6 class="h6 text-gray-900 mb-4 fw-bold">Grupos de Agentes Creados</h6>
                             </div>
                             <div class="col-md-6 d-md-flex justify-content-md-end">
-                                <button class="btn btn-primary me-md-2" type="button" data-toggle="tooltip" data-placement="top" title="Agregar Funcionario">
+                                <a href="/Catalogos/AgregarGrupo" class="btn btn-primary me-md-2" type="button" data-toggle="tooltip" data-placement="top"                              title="Agregar Funcionario">
                                     <i class="fas fa-plus me-2"></i>Agregar
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -152,4 +149,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

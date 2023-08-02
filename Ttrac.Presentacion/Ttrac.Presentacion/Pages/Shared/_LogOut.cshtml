@@ -12,7 +12,10 @@
             <div class="modal-body">Seleccione "Cerrar Sesión" si está seguro que desea abandonar la sesión.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" asp-controller="Ingreso" asp-action="Ingreso">Cerrar Sesión</a>
+                <form method="post" asp-page="/Inicio/Ingreso"  asp-page-handler="Logout">
+                    <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
+                </form>
+                
             </div>
         </div>
     </div>

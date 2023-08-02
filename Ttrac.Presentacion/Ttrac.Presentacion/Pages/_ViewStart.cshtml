@@ -1,3 +1,10 @@
 ﻿@{
-    Layout = "_Layout";
+    if (Context.Request.Cookies["LoggedIn"] != "true")
+    {
+        Layout = "_LoginLayout"; // Un layout con solo el contenido de inicio de sesión
+    }
+    else
+    {
+        Layout = "_Layout"; // El layout normal con la barra de navegación, etc.
+    }
 }

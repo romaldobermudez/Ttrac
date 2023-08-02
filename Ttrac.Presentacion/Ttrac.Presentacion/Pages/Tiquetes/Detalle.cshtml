@@ -1,27 +1,19 @@
 ﻿@page
 @model Ttrac.Presentacion.Pages.Tiquetes.TiquetesModel
-@{
-}
-
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Tiquetes/Tiquetes"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item" aria-current="page"><a href="/Tiquetes/Tiquetes">Tiquetes</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Detalle del tiquete</li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Tiquetes/Tiquetes"><i class="fas fa-fw fa-ticket-alt"></i> Tiquetes</a></li>
+            <li class="breadcrumb-item">Detalle del tiquete</li>
         </ol>
     </nav>
-
-    <!-- Outer Row -->
     <div class="row justify-content-center">
-
         <div class="col-lg-12 col-md-9">
-
-            <div class="card o-hidden border-0 shadow-lg my-3">
-                <div class="card-body p-0">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        @*Primer Columna*@
+                        @*Primera fila*@
 
                         <div class="col-lg-12">
 
@@ -435,4 +427,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

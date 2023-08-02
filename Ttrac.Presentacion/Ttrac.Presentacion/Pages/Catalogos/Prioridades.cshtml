@@ -1,21 +1,19 @@
 ﻿@page
 @model Ttrac.Presentacion.Pages.Catalogos.PrioridadesModel
-@{
-}
-
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Catálogos y Grupos</li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Catalogos/GrupoAgente"><i class="fas fa-fw fa-cog"></i> Catálogos y Grupos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Prioridades de Tiquetes</li>
         </ol>
     </nav>
-
-    <!-- Outer Row -->
     <div class="row justify-content-center">
-        <div class="card o-hidden border-0 shadow-lg my-3">
-            <div class="card-body p-0">
-                <!-- Nested Row within Card Body -->
+        <div class="col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        @*Primera fila*@
                 <div class="row">
                     <div class="card-body">
                         <div class="row">
@@ -72,7 +70,10 @@
                                     </td>
                                     <td>Urgente</td>
                                     <td>10</td>
-                                    <td style="background-color: red; width: 30px; height: 30px; border-radius: 80%; display: flex;"></td>
+                                            <td>
+                                                <div style="background-color: red; width: 30px; height: 30px; border-radius: 100%; margin: 0 auto;"></div>
+                                            </td>
+
                                     <td>
                                         <span class="badge badge-success">
                                             <i class="fas fa-check-circle"></i> Activo
@@ -87,7 +88,9 @@
                                     </td>
                                     <td>Alta</td>
                                     <td>5</td>
-                                    <td style="background-color: yellow; width: 30px; height: 30px; border-radius: 80%; display: flex;"></td>
+                                    <td>
+                                                <div style="background-color: yellow; width: 30px; height: 30px; border-radius: 100%; margin: 0 auto;"></div>
+                                        </td>
                                     <td>
                                         <span class="badge badge-danger">
                                             <i class="fas fa-times-circle"></i> Inactivo
@@ -102,7 +105,10 @@
                                     </td>
                                     <td>Baja</td>
                                     <td>1</td>
-                                    <td style="background-color: green; width: 30px; height: 30px; border-radius: 80%; display: flex;"></td>
+                                            <td>
+                                                <div style="background-color: forestgreen; width: 30px; height: 30px; border-radius: 100%; margin: 0 auto;"></div>
+                                            </td>
+                                            
                                     <td>
                                         <span class="badge badge-danger">
                                             <i class="fas fa-times-circle"></i> Inactivo
@@ -157,5 +163,7 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
     </div>
 </div>

@@ -1,27 +1,19 @@
 ﻿@page
 @model Ttrac.Presentacion.Pages.Catalogos.AgregarGrupoModel
-@{
-}
-
-<div class="container">
+<div class="pl-4 pr-4">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-4 bg-light">
-            <li class="breadcrumb-item"><a href="/Index"><i class="fas fa-home"></i></a></li>
-            <li class="breadcrumb-item active" aria-current="page">Agregar Grupo de Agentes</li>
+        <ol class="breadcrumb bg-light">
+            <li class="breadcrumb-item"><a href="/Catalogos/GrupoAgente"><i class="fas fa-fw fa-cog"></i> Catálogos y Grupos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Agregar Grupo</li>
         </ol>
     </nav>
-
-    <!-- Outer Row -->
     <div class="row justify-content-center">
-
         <div class="col-lg-12 col-md-9">
-
-            <div class="card o-hidden border-0 shadow-lg my-3">
-                <div class="card-body p-0">
+            <div class="card o-hidden border-0 shadow-lg">
+                <div class="card-body mb-4">
                     <!-- Nested Row within Card Body -->
-                    <div class="row gx-4 gy-2">
-
-                        <!-- Primer Colunna -->
+                    <div class="row">
+                        @*Primera fila*@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <form class="user">
@@ -113,7 +105,7 @@
                     <div class="row gx-4 gy-2 align-items-stretch">
                         <div class="col-lg-6">
                             <form class="funcionarios">
-                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+                                <div class="text-align-left border p-3 mb-3 rounded">
 
                                     <h6 class="h6 text-gray-900 mb-4 fw-bold">Agentes Agregados</h6>
 
@@ -172,7 +164,7 @@
 
                         <div class="col-md-6">
                             <form class="funcionarios">
-                                <div class="text-align-left border border-dark p-3 mb-3 rounded">
+                                <div class="text-align-left border p-3 mb-3 rounded">
 
                                     <h6 class="h6 text-gray-900 mb-4 fw-bold">Agentes Disponibles para Agregar</h6>
 
